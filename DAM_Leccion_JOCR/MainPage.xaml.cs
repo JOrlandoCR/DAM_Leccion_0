@@ -26,11 +26,22 @@ namespace DAM_Leccion_JOCR
 
         public void Ejecutar() 
         {
-            PersonaModel personaModel = new PersonaModel();
+            PersonaModel personaModel = new PersonaModel()
+            {
+                Nombre = "kkkkkk", 
+            };
 
-            personaModel.Nombre = "kk";
+            BindingContext = personaModel.Nombre;
 
-            txtNombre.Text = "kk";
+            //txtNombre.Text = personaModel.Nombre;
+
+            //Binding personaBinding = new Binding(); 
+
+            //personaBinding.Source = personaModel;   //Origen
+            //personaBinding.Path = "Nombre";//Ruta
+            //txtNombre.SetBinding(Entry.TextProperty, personaBinding);//Destinofinal
+           
+
         }
 
         private void Aceptar_Clicked(object sender, EventArgs e)
