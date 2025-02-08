@@ -8,5 +8,10 @@
 
             MainPage = new AppShell();
         }
+
+        //protected override window CreateWindow(IActivationState? activationState)
+        //{
+        //      return new Window(new AppShell());
+        //}
     }
 }

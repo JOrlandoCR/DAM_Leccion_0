@@ -5,6 +5,8 @@ namespace DAM_Leccion_JOCR
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        //Aqui se declara global, en este caso una propiedad del perona model
+        private PersonaModel personaModel { get; set; }
 
         public MainPage()
         {
@@ -26,12 +28,16 @@ namespace DAM_Leccion_JOCR
 
         public void Ejecutar() 
         {
-            PersonaModel personaModel = new PersonaModel()
+            //PersonaModel personaModel = new PersonaModel();
+            //personaModel.Nombre = "Holaa";
+            //txtNombre.Text = personaModel.Nombre; 
+
+            personaModel = new PersonaModel()
             {
                 Nombre = "kkkkkk", 
             };
 
-            BindingContext = personaModel.Nombre;
+            BindingContext = personaModel;
 
             //txtNombre.Text = personaModel.Nombre;
 
@@ -41,7 +47,6 @@ namespace DAM_Leccion_JOCR
             //personaBinding.Path = "Nombre";//Ruta
             //txtNombre.SetBinding(Entry.TextProperty, personaBinding);//Destinofinal
            
-
         }
 
         private void Aceptar_Clicked(object sender, EventArgs e)
