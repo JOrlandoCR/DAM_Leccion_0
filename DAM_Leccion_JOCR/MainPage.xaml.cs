@@ -1,17 +1,18 @@
 ﻿using DAM_Leccion_JOCR.Model;
+using DAM_Leccion_JOCR.ViewModel;
 
 namespace DAM_Leccion_JOCR
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
-        //Aqui se declara global, en este caso una propiedad del perona model
-        private PersonaModel personaModel { get; set; }
+
+        MainPageViewModel mainPageViewModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
-            Ejecutar();
+            BindingContext = mainPageViewModel;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -26,37 +27,13 @@ namespace DAM_Leccion_JOCR
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        public void Ejecutar() 
-        {
-            //PersonaModel personaModel = new PersonaModel();
-            //personaModel.Nombre = "Holaa";
-            //txtNombre.Text = personaModel.Nombre; 
-
-            personaModel = new PersonaModel()
-            {
-                Nombre = "kkkkkk",
-                Apellido = "kkkk",
-                Edad = "21"
-            };
-
-            BindingContext = personaModel;
-
-            //txtNombre.Text = personaModel.Nombre;
-
-            //Binding personaBinding = new Binding(); 
-
-            //personaBinding.Source = personaModel;   //Origen
-            //personaBinding.Path = "Nombre";//Ruta
-            //txtNombre.SetBinding(Entry.TextProperty, personaBinding);//Destinofinal
-           
-        }
 
         private void Aceptar_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la bd", "Aceptar");
-            personaModel.Nombre = "Orlando";
-            personaModel.Apellido = "castro";
-            personaModel.Edad = "21";
+            //DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la bd", "Aceptar");
+            //personasModel.Nombre = "Orlando";
+            //personasModel.Apellido = "castro";
+            //personasModel.Edad = "21";
         }
     }
 
