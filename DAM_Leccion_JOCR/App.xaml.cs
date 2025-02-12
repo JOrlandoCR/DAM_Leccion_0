@@ -1,4 +1,6 @@
-﻿namespace DAM_Leccion_JOCR
+﻿using DAM_Leccion_JOCR.View;
+
+namespace DAM_Leccion_JOCR
 {
     public partial class App : Application
     {
@@ -6,12 +8,9 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
-        }
+            //MainPage = new AppShell();
 
-        //protected override window CreateWindow(IActivationState? activationState)
-        //{
-        //      return new Window(new AppShell());
-        //}
+            MainPage = new PersonasView();
+        }
     }
 }

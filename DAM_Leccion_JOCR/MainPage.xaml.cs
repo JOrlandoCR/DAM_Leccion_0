@@ -35,6 +35,13 @@ namespace DAM_Leccion_JOCR
             //personasModel.Apellido = "castro";
             //personasModel.Edad = "21";
         }
+
+        private class MainPageViewModel
+        {
+            public MainPageViewModel()
+            {
+            }
+        }
     }
 
 }
