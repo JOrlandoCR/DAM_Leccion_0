@@ -44,13 +44,23 @@
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Escribe un nombre"/>
 
+            <Entry 
+                x:Name="txtApellido"
+                Text="{Binding Apellido}" 
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Escribe un apellido"/>
+
+            <Entry 
+                x:Name="txtEdad"
+                Text="{Binding Edad}" 
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Escribe una edad"/>
+
             <Button
                 x:Name="Aceptar"
                 Clicked="Aceptar_Clicked"
                 HorizontalOptions="CenterAndExpand"
                 Text="Aceptar" />
-
-
 
         </VerticalStackLayout>
     </ScrollView>

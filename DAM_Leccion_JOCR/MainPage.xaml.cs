@@ -34,7 +34,9 @@ namespace DAM_Leccion_JOCR
 
             personaModel = new PersonaModel()
             {
-                Nombre = "kkkkkk", 
+                Nombre = "kkkkkk",
+                Apellido = "kkkk",
+                Edad = "21"
             };
 
             BindingContext = personaModel;
@@ -52,6 +54,9 @@ namespace DAM_Leccion_JOCR
         private void Aceptar_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Asistente del sistema", "Se ha guardado el registro en la bd", "Aceptar");
+            personaModel.Nombre = "Orlando";
+            personaModel.Apellido = "castro";
+            personaModel.Edad = "21";
         }
     }
 
